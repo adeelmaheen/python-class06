@@ -1,0 +1,21 @@
+{
+    "name": "Python 3.12 with Jupyter Notebook",
+    "dockerFile": "Dockerfile",
+    "context": ".",
+    "appPort": [
+      8888
+    ],
+    "remoteUser": "root",
+    "postCreateCommand": "pip install --no-cache-dir jupyter",
+    "settings": {
+      "python.pythonPath": "/usr/local/bin/python"
+    },
+    "extensions": [
+      "ms-python.python",
+      "ms-toolsai.jupyter"
+    ],
+    "runArgs": [
+      "--env", "JUPYTER_CONFIG_DIR=/app/.jupyter"
+    ]
+  }
+  
